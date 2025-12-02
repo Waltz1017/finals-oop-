@@ -1,0 +1,756 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    background: transparent;
+}
+
+body, html{
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0px;
+    background-image: url(images/bgofall.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #B8CFCE;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+.layout {
+    display: flex;
+    flex-direction: row;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    background-size: cover;
+    background-color: transparent;
+    background-image: url(images/bgfall.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+}
+
+.footer {
+    color: #000;
+    flex: 1;
+    height: 100vh;
+    height: auto;
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+    background: transparent;
+}
+
+@media (min-width: 600px){
+    body {
+        font-size: 18px;
+    }
+    .header {
+        width: 250px;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px;
+    }
+    .header{
+        width: 310px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.menu-btn {
+    background-color: #7F8CAA;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+}
+
+.menu-btn:active {
+    font-weight: bold;
+     color: #ffffff;
+}
+
+.menu-btn:hover {
+    background-color: #333446;
+    color: #fff;
+}
+
+.close-btn {
+    display: block;
+    background: none;
+    border: none;
+    color: #000;
+    background-color: #7F8CAA;
+    font-size: 24px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-bottom: 10px;
+    border: 2px solid #fff;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+}
+
+.close-btn:active {
+    font-weight: bold;
+     color: #ffffff;
+}
+
+.close-btn:hover {
+    background-color: #333446;
+    color: #fff;
+}
+
+
+
+
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #B8CFCE;
+    transition: left 0.3s ease;
+    padding: 20px;
+    z-index: 1;
+}
+
+.nav.active {
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+}
+
+.nav a {
+    border: 2px solid #fff;
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    height: auto;
+    background-color: #7F8CAA;
+    color: black;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: clamp(16px, 2vw, 24px);
+    width: clamp(100px, 10vw, 150px);
+}
+
+.nav a:active {
+    font-weight: bold;
+     color: #ffffff;
+}
+
+.nav a:hover {
+    background-color: #333446;
+    color: #fff;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.logo {
+    padding: 20px;
+    margin: 20px;
+}
+
+.logo a {
+    border: 2px solid #fff;
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: clamp(16px, 2vw, 25px);  
+    background-color: #7F8CAA;
+    color: black;
+    margin-top: 30px;
+    text-decoration: none;
+    font-size: 25px;
+    width: 100%;
+}
+
+.logo a:active {
+    font-weight: bold;
+    
+}
+
+.logo a:hover {
+    background-color: #333446;
+    color: #fff;
+}
+
+/*<==================================
+====================================>*/
+
+.home, .resume, .about {
+    height: clamp(80vh, 100vh, 100vh);
+}
+
+.home, .resume, .about {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: transparent;
+    color: black;
+    margin: 0px;
+    width: 100%;
+    padding: clamp(10px, 3vw, 30px) 0;
+    font-size: clamp(16px, 2vw, 22px);
+}
+
+.resume {
+    height: 200vh;
+}
+
+
+/*<==================================
+====================================>*/
+
+.home h2, .resume h2, .about h2, .footer h2{
+    font-size: 100px;
+    margin-bottom: 0px;
+    border-bottom: 10px ridge #333446;
+    border-radius: 50px;
+    background-color: #7F8CAA;
+    text-align: right;
+    /* background: pink; */
+    margin-top: 0px;
+    margin-left: 20px;
+}
+
+/*<==================================
+HOME
+====================================>*/
+
+.parentcont{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid;
+    background-color: #EAEFEF;
+    border-radius: 100px;
+    align-items: center;
+    width: 80%;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+
+.intro {
+    margin: 100px auto 0 auto;
+    font-size: clamp(1rem, 5vw, 1.5rem);
+    font-family: Courier;
+    text-align: left;
+}
+
+.name {
+    margin: 100px auto 0 auto;
+    font-size: clamp(1rem, 5vw, 15rem);
+    text-align: center;
+    font-family: Georgia;
+    opacity: 0;
+    animation: fadeLoop 2s ease-in-out infinite;
+}
+
+@keyframes fadeLoop {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.par {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 4s steps(30, end) infinite, blink 0.5s step-end infinite;
+    text-align: center;
+    margin: 0;
+}
+
+@keyframes typing {
+    0% { width: 0; }
+    50% { width: 100%; }
+    100% { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+
+/*<==================================
+RESUME/EDUCATION
+====================================>*/
+
+.resumecontents {
+    border: 5px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.educ {
+    background-color: #EAEFEF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tag {
+    font-size: 50px;
+    margin: 0;
+    background-color: #7F8CAA;
+}
+
+.educlvls {
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: #B8CFCE;
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.educ h4{
+    margin-left: 20px;
+}
+
+.infosec {
+    display: flex;
+    flex-direction: row;
+}
+
+.epar, .hspar, .cpar {
+    margin-left: 70px;
+}
+
+/*<==================================
+RESUME/GOAL
+====================================>*/
+
+.infosec {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+.goal {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: #EAEFEF;
+}
+
+.myGoal {
+    font-size: 50px;
+    margin: 30px 0;
+    background-color: #7F8CAA;
+}
+
+.para {
+    text-align: justify;
+    border: 2px solid #333446;
+    border-radius: 10px;
+    background-color: #B8CFCE;
+    margin: 40px;
+}
+
+.paragra {
+    margin: 30px;
+    
+}
+
+/*<==================================
+RESUME/ PERSONAL INFO
+====================================>*/
+
+.personal {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #EAEFEF;
+}
+
+.data0 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1;
+    align-items: center;
+}
+
+.data1, .data2 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 350px;
+    min-width: 200px;
+}
+
+.info {
+    font-size: 50px;
+    margin: 30px 0;
+    background-color: #7F8CAA;
+}
+
+.agee, .res, .add, .email,  .phon, .fname {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: 2px solid #333446;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+    background-color: #B8CFCE;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+
+
+
+/*<==================================
+RESUME/SKILLS
+====================================>*/
+
+.skills {
+    flex: 1;
+    flex-direction: column;
+    background-color: #EAEFEF;
+    align-items: center;
+}
+
+.skill {
+    flex: 1;
+    font-size: 50px;
+    margin: 30px 0;
+    background-color: #7F8CAA;
+    margin: 0px;
+}
+
+.skilllist {
+    display: flex;
+    flex: 1;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px;
+}
+
+.gaming, .prog, .designing, .ct {
+    border: 2px solid #333446;
+    border-radius: 10px;
+    background-color: #B8CFCE;
+    width: 70%;
+    margin: 20px;
+}
+
+.gaming h4, .prog h4, .designing h4, .ct h4 {
+    margin: 0px;
+    font-size: 30px;
+}
+
+.graphgame, .graphprog, .graphdes, .graphct {
+    background: #333446;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 500px;
+}
+
+.bar-fillgame {
+    width: 98%;
+    background-color: #EAEFEF;
+    height: 30px;
+    border: 2px solid #333446;
+    border-radius: 10px;
+    text-align: right;
+}
+
+.bar-fillprog {
+    width: 80%;
+    background-color: #EAEFEF;
+    height: 30px;
+    border: 2px solid #333446;
+    border-radius: 10px;
+    text-align: right;
+}
+
+.bar-filldes {
+    width: 70%;
+    background-color: #EAEFEF;
+    height: 30px;
+    border: 2px solid #333446;
+    border-radius: 10px;
+    text-align: right;
+}
+
+.bar-fillct {
+    width: 90%;
+    background-color: #EAEFEF;
+    height: 30px;
+    border: 2px solid #333446;
+    border-radius: 10px;
+    text-align: right;
+}
+
+/*<==================================
+ABOUT
+====================================>*/
+
+.background {
+    border: 6px solid #000;
+    border-radius: 10px;
+    background-color: #EAEFEF;
+    margin: 0px;
+    margin-top: 20px;
+}
+
+.aboutcontent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: clamp(20px, 10vh, 100px);
+}
+
+.paragrap {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: justify;
+    width: 90%;
+    max-width: 900px;
+    align-items: center;
+    background-color: #B8CFCE;
+    margin: 0 auto;
+    font-size: clamp(16px, 2vw, 20px);
+}
+
+.description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: clamp(20px, 10vh, 100px);
+}
+
+.description h3 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.descontent {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: justify;
+    width: 90%;
+    max-width: 900px;
+    align-items: center;
+    background-color: #B8CFCE;
+    margin: 0 auto;
+    font-size: clamp(16px, 2vw, 20px);
+}
+
+.bastafeature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    flex: 1;
+}
+
+#basta {
+    border: 2px solid #333446;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.aboutsubmit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.aboutme2 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: #EAEFEF;
+    width: 100%;
+    min-height: clamp(400px, 60vh, 100%);
+}
+
+.hobbylabel {
+    font-size: clamp(24px, 4vw, 50px);
+    margin: 30px 0;
+    background-color: #7F8CAA;
+}
+
+.hobbies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    border-radius: 10px;
+    padding: clamp(10px, 3vw, 40px);
+    padding: 10px;
+    width: 100%;
+    min-height: clamp(300px, 50vh, 800px);
+}
+
+.watch, .play, .sleep, .work {
+    flex: 1;
+    flex-direction: column;
+    margin: 0 10px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: #B8CFCE;
+    padding: 10px;
+}
+
+/*<==================================
+CONTACT ME
+====================================>*/
+
+.formbackground {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 6px solid;
+    border-radius: 10px;
+    background-color: #EAEFEF;
+    width: 100%;
+    height: 500px;
+    margin-top: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    margin: clamp(10px, 2vw, 30px);
+    border: 2px solid #333446;
+    height: clamp(300px, 450px, 500px);
+    width: 40%;
+    background-color: #B8CFCE;
+    align-items: center;
+}
+
+.user, .useremail {
+    background-color: #EAEFEF;
+    width: clamp(150px, 80vw, 300px);
+    height: auto;
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+.usercomment {
+    width: clamp(150px, 80vw, 300px);
+    height: clamp(50px, 40vw, 200px);
+    background-color: #EAEFEF;
+    padding: 8px;
+}
+
+.submit {
+    width: clamp(100px, 80vw, 250px);
+    padding: 10px;
+    background-color: #fff;
+}
+
+.social {
+    width: 100%;
+}
+
+.form2 {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    margin: clamp(10px, 2vw, 30px);
+    border: 2px solid #333446;
+    height: clamp(300px, 450px, 500px);
+    width: 40%;
+    background-color: #B8CFCE;
+}
+
+.form2 h3 {
+    text-align: center;
+}
+
+.fb, .x, .ig, .yt, .tiktok {
+    display: flex;
+    margin: clamp(0.5rem, 2vw, 1.5rem) 0;
+    background: transparent;
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+    align-items: flex-start;
+    width: clamp(50px, 80%, 1200px);
+}
+
+.fb img, .x img, .ig img, .yt img, .tiktok img {
+    width: 50px;
+    height: 50px;
+    margin-left: 30px
+}
+
+.fb a, .x a, .ig a, .yt a, .tiktok a {
+    text-decoration: none;
+    font-size: clamp(14px, 2vw, 22px);
+    flex: 1;
+    text-align: left;
+    width: 100%;
+    margin-left: clamp(10px, 2vw, 30px);
+}
+

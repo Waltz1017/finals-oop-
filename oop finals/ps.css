@@ -1,0 +1,48 @@
+.resume { /*PARENT*/
+    background: transparent;
+}
+
+.resumecontents {
+    border: 6px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.educ {
+    background-color: #EAEFEF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.educlvls {
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: #B8CFCE;
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.educ h4{
+    margin-left: 20px;
+}
+
+.tag {
+    font-size: 50px;
+    margin: 0;
+    background-color: #7F8CAA;
+}
+
+.infosec {
+    display: flex;
+    flex-direction: row;
+}
+
+.epar, .hspar, .cpar {
+    margin-left: 70px;
+}

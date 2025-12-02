@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP Finals</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body> 
+    <div class="layout">
+        <header class="header">
+            <button id="menu-btn" class="menu-btn" aria-label="Toggle navigation">☰</button>
+            <nav id="nav" class="nav" aria-label="Main navigation">
+                <button class="close-btn">✖</button>
+            <div class="logo">
+                <h1 class="personalWeb"><a href="#home">W</a></h1>
+            </div>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about" class="active">About Me</a></li>
+                    <li><a href="#resume" class="active">Resume</a></li>
+                    <li><a href="#contact" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="content">
+            <section class="home" id="home">
+                <h2>Home</h2>
+                <div class="parentcont">
+                    <div class="container">
+                        <p class="intro"><u>Hello, I am</u></p>
+                        <p><span class="name">WALTER</span></p>
+                        <p class="par">Second year Student at Universidad de Dagupan</p>
+                    </div>
+                </div>
+            </section>
+
+            
+
+            <section class="about" id="about">
+                <h2>About Me</h2>
+                <div class="background">
+                    <div class="aboutcontent">
+                        <div class="parag">
+                            <p class="paragrap">
+    <?php
+    if (file_exists(__DIR__ . "/aboutsave.txt")) {
+        echo nl2br(htmlspecialchars(file_get_contents(__DIR__ . "/aboutsave.txt")));
+    } else {
+        echo "Default about text...";
+    }
+    ?>
+</p>
+                        </div>
+                    </div>
+
+                    <div class="description">
+                            <h3 class="desc">Edit Description</h3>
+                            <div class="descontent">
+                            <form class="bastafeature" action="aboutsave.php" method="post">
+                                <textarea name="basta" id="basta" placeholder="pakyu"></textarea>
+                                <input type="submit" class="aboutsubmit" value="Submit">
+                            </div>
+                            </form>
+                        </div>
+                        
+                        <div class="aboutme2">
+                            <h3 class="hobbylabel">My Hobbies</h3>
+                            <div class="hobbies">
+                                <div class="watch">
+                                    <p class="movies">Watching Movies/Series</p>
+                                    <p class="statement">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, deserunt, earum neque, pariatur harum explicabo eaque placeat facilis voluptatum magni libero? Voluptates dignissimos voluptatum id expedita dolore officiis dolorem quas!</p>
+                                </div>
+                                <div class="play">
+                                    <p class="online">Playing Online Games</p>
+                                    <p class="statement">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid sint odit repudiandae unde doloribus voluptatum sunt earum neque rem, ducimus vero ipsa at ab repellendus laborum placeat molestias nulla corrupti?</p>
+                                </div>
+                                <div class="sleep">
+                                    <p class="slee">Sleep</p>
+                                    <p class="statement">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae aut cupiditate unde ipsum soluta consequuntur numquam quisquam cum vero sapiente dicta porro officia sint similique, blanditiis asperiores odit culpa! Temporibus?</p>
+                                </div>
+                                <div class="work">
+                                    <p class="wor">Work</p>
+                                    <p class="statement">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate consectetur libero accusantium atque repellendus rem quaerat inventore a unde beatae ut dicta, fuga fugit ea quis. Rerum, quasi. Ad, neque!</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                </div>
+            </section>
+
+            <section class="resume" id="resume">
+                <h2>Resume</h2>
+                    <div class="resumecontents">    
+                        <div class="educ"> 
+                            <h3 class="tag">Education</h3>
+                            <div class="educlvls">
+                                <div class="elem">
+                                    <h4 class="ele">Elementary</h4>
+                                    <p class="epar">Graduated with honors at Pantal Elementary School years 2012 - 2018.</p>
+                                </div>
+                                
+                                <div class="hs">
+                                    <h4 class="highs">Junior High School - Senior High School</h4>
+                                    <p class="hspar">Graduated with high honors at Escuela de Nuestra 
+                                        Seniora de La Salette years 2018 - 2024.</p>
+                                </div>
+                                
+                                <div class="college">
+                                    <h4 class="col">College</h4>
+                                        <p class="cpar">Currently studying as 2nd year BSIT student</p>
+                                        <p class="cpar">Studying at Universidad de Dagupan.</p>
+                                </div>
+                            </div>
+                        </div>      
+                        
+                    <div class="infosec">
+                        <div class="goal">
+                            <h3 class="myGoal">My goal</h3>
+                            <div class="para">
+                                <p class="paragra">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Non facere tempora commodi! Alias ullam doloremque debitis consequuntur
+                                nesciunt. Quibusdam eveniet temporibus laboriosam voluptatem 
+                                eos quaerat velit doloremque neque exercitationem debitis.</p>
+                            </div>
+                        </div>
+
+                        <div class="personal">
+                            <h3 class="info">Personal Info</h3>
+                            <div class="data0">
+                                <div class="data1">
+                                    <div class="fname">
+                                        <p class="fulln">Full Name <br> Walter F. Ballesteros Jr.</p>
+                                    </div>
+                                    <div class="age">
+                                        <p class="agee">Age <br> 20</p>
+                                    </div>
+                                    <div class="phone">
+                                        <p class="phon">Phone <br> +63 961 200 8471</p>
+                                    </div>
+                                </div>
+
+                                    <div class="data2">
+                                        <div class="add">
+                                            <p class="address">Address <br> 91 Guibang Pantal</p>
+                                        </div>
+                                        <div class="res">
+                                            <p class="residence">Residence <br> Dagupan City</p>
+                                        </div>
+                                        <div class="email">
+                                            <p class="emai">E-mail <br> ballesteroswalter778@gmail.com</p>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+
+                    <div class="skills">
+                        <h3 class="skill">Skills</h3>
+                            <div class="skilllist">
+                                <div class="gaming">                            
+                                    <h4>Gaming</h4>
+                                    <div class="graphgame">
+                                        <div class="bar-fillgame">98%</div>
+                                    </div>
+                                </div>
+
+                                <div class="prog">
+                                    <h4>Programming</h4>
+                                    <div class="graphprog">
+                                        <div class="bar-fillprog">80%</div>
+                                    </div>
+                                </div>
+                                    
+                                <div class="designing">
+                                    <h4>Designing</h4>
+                                    <div class="graphdes">
+                                        <div class="bar-filldes">70%</div>
+                                    </div>
+                                </div>
+                                    
+                                <div class="ct">
+                                    <h4>Critical Thinking</h4>
+                                    <div class="graphct">
+                                        <div class="bar-fillct">90%</div>
+                                </div>  
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+                    <nav class="contact" id="contact">
+                        <h2>Contact Me!</h2>
+                            <div class="formbackground">
+                                <form class="form" action="save.php" method="post">
+                                    <h3 class="feedback">Feedback form</h3>
+
+                                    <div class="userdetails">
+                                        <div class="namegroup">
+                                            <input type="text" id="nameinput" name="user" class="user" required placeholder="Enter your name here">
+                                        </div>
+                                        <div class="usergroup">
+                                            <input type="text" id="userinput" name="useremail" class="useremail" required placeholder="Enter your username here">
+                                        </div>
+
+                                        <div class="commentgroup">
+                                            <textarea id="commentinput" name="usercomment" class="usercomment" required placeholder="Enter your comment here"></textarea>
+                                        </div>
+                                    </div>
+                                    <input type="submit" class="submit" value="Submit">
+                                </form>
+
+                                <form class="form2">
+                                    <div class="social">
+                                        <h3 class="socialmed">My Socials</h3>
+                                        <div class="fb"><img src="images/fb.png" alt="fb-icon"><a href="https://facebook.com">Facebook</a></div>
+                                        <div class="x"><img src="images/x.png" alt="x-icon"><a href="https://x.com/">X</a></div>
+                                        <div class="ig"><img src="images/ig.png" alt="ig-icon"><a href="https://instagram.com">Instagram</a></div>
+                                        <div class="tiktok"><img src="images/tiktok.png" alt="tiktok-icon"><a href="https://tiktok.com">Tiktok</a></div>
+                                        <div class="yt"><img src="images/yt.png" alt="yt-icon"><a href="https://youtube.com">YouTube</a></div>
+                                    </div>
+                                </form>
+                            </div>
+                    </nav>
+                </footer>
+    </div>
+
+            <script>
+
+                const params = new URLSearchParams(window.location.search);
+
+                if (params.get("status") === "comment_saved") {
+                    alert("Your comment has been saved!");
+                }
+                if (params.get("status") === "feedback_sent") {
+                    alert("Your feedback has been sent!");
+                }
+                if (params.get("status") === "about_updated") {
+                    alert("Your description has been updated!");
+                }
+
+                const menuBtn = document.getElementById("menu-btn");
+                const nav = document.getElementById("nav");
+                const closeBtn = document.querySelector('.close-btn');
+
+                menuBtn.addEventListener("click", () => {
+                    nav.classList.toggle("active");
+                });
+
+                closeBtn.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                });
+                
+            </script>
+
+</body>
+</html>
