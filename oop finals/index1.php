@@ -44,26 +44,18 @@
                 <div class="background">
                     <div class="aboutcontent">
                         <div class="parag">
-                            <p class="paragrap">
-    <?php
-    if (file_exists(__DIR__ . "/aboutsave.txt")) {
-        echo nl2br(htmlspecialchars(file_get_contents(__DIR__ . "/aboutsave.txt")));
-    } else {
-        echo "Default about text...";
-    }
-    ?>
-</p>
-                        </div>
-                    </div>
+                            <p class="paragrap" id="paragrap">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                            </p>
 
-                    <div class="description">
+                        <div class="description">
                             <h3 class="desc">Edit Description</h3>
                             <div class="descontent">
-                            <form class="bastafeature" action="aboutsave.php" method="post">
-                                <textarea name="basta" id="basta" placeholder="pakyu"></textarea>
-                                <input type="submit" class="aboutsubmit" value="Submit">
+                                <form class="bastafeature" onsubmit="updateParagraph(event)">
+                                    <textarea name="basta" id="basta" placeholder="Write something..."></textarea>
+                                    <input type="submit" class="aboutsubmit" value="Submit">
+                                </form>
                             </div>
-                            </form>
                         </div>
                         
                         <div class="aboutme2">
@@ -230,6 +222,12 @@
     </div>
 
             <script>
+
+                function updateParagraph(e) {
+                e.preventDefault(); // prevent page reload
+                document.getElementById("paragrap").textContent =
+                    document.getElementById("basta").value;
+            }
 
                 const params = new URLSearchParams(window.location.search);
 
